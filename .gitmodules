@@ -1,0 +1,3 @@
+[submodule "Vendor/BBCore"]
+	path = Vendor/BBCore
+	url = https://github.com/BionBilateral/BBCore.git

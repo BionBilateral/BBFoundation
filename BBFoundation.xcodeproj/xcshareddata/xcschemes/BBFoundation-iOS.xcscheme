@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79D00D481DD7BEA7005DA58E"
-               BuildableName = "BBFoundation-iOS.framework"
+               BuildableName = "BBFoundation.framework"
                BlueprintName = "BBFoundation-iOS"
                ReferencedContainer = "container:BBFoundation.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79D00D481DD7BEA7005DA58E"
-            BuildableName = "BBFoundation-iOS.framework"
+            BuildableName = "BBFoundation.framework"
             BlueprintName = "BBFoundation-iOS"
             ReferencedContainer = "container:BBFoundation.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79D00D481DD7BEA7005DA58E"
-            BuildableName = "BBFoundation-iOS.framework"
+            BuildableName = "BBFoundation.framework"
             BlueprintName = "BBFoundation-iOS"
             ReferencedContainer = "container:BBFoundation.xcodeproj">
          </BuildableReference>

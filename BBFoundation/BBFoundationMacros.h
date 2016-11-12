@@ -16,7 +16,7 @@
 #ifndef __BB_FRAMEWORKS_FOUNDATION_MACROS__
 #define __BB_FRAMEWORKS_FOUNDATION_MACROS__
 
-#import "BBFrameworksFunctions.h"
+#import <BBCore/BBFrameworksFunctions.h>
 
 #define BBBoundedValue(value, min, max) MAX(MIN((value), (max)), (min))
 

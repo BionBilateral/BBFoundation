@@ -85,7 +85,40 @@
 		79D00DD51DD7BFEB005DA58E /* NSURLRequest+BBFoundationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D00D8A1DD7BFEB005DA58E /* NSURLRequest+BBFoundationExtensions.m */; };
 		79D00DD61DD7BFEB005DA58E /* NSURLRequest+BBFoundationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D00D8A1DD7BFEB005DA58E /* NSURLRequest+BBFoundationExtensions.m */; };
 		79D00DD71DD7C014005DA58E /* BBFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D00D4C1DD7BEA7005DA58E /* BBFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79D00E291DD7CA25005DA58E /* BBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D00E261DD7CA0A005DA58E /* BBCore.framework */; };
+		79D00E2A1DD7CA2A005DA58E /* BBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D00E281DD7CA0A005DA58E /* BBCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79D00E251DD7CA0A005DA58E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79D00DFF1DD7C821005DA58E;
+			remoteInfo = "BBCore-iOS";
+		};
+		79D00E271DD7CA0A005DA58E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79D00E0F1DD7C870005DA58E;
+			remoteInfo = "BBCore-watchOS";
+		};
+		79D00E2B1DD7CA4A005DA58E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D00DFE1DD7C821005DA58E;
+			remoteInfo = "BBCore-iOS";
+		};
+		79D00E2D1DD7CA4E005DA58E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D00E0E1DD7C870005DA58E;
+			remoteInfo = "BBCore-watchOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		79D00D491DD7BEA7005DA58E /* BBFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +164,7 @@
 		79D00D881DD7BFEB005DA58E /* NSURL+BBFoundationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+BBFoundationExtensions.m"; sourceTree = "<group>"; };
 		79D00D891DD7BFEB005DA58E /* NSURLRequest+BBFoundationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+BBFoundationExtensions.h"; sourceTree = "<group>"; };
 		79D00D8A1DD7BFEB005DA58E /* NSURLRequest+BBFoundationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+BBFoundationExtensions.m"; sourceTree = "<group>"; };
+		79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BBCore.xcodeproj; path = Vendor/BBCore/BBCore.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D00E291DD7CA25005DA58E /* BBCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D00E2A1DD7CA2A005DA58E /* BBCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +190,7 @@
 		79D00D3F1DD7BEA7005DA58E = {
 			isa = PBXGroup;
 			children = (
+				79D00E1F1DD7C9FE005DA58E /* Vendor */,
 				79D00D4B1DD7BEA7005DA58E /* BBFoundation */,
 				79D00D4A1DD7BEA7005DA58E /* Products */,
 			);
@@ -232,6 +269,23 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		79D00E1F1DD7C9FE005DA58E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		79D00E211DD7CA0A005DA58E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79D00E261DD7CA0A005DA58E /* BBCore.framework */,
+				79D00E281DD7CA0A005DA58E /* BBCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -306,6 +360,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				79D00E2C1DD7CA4A005DA58E /* PBXTargetDependency */,
 			);
 			name = "BBFoundation-iOS";
 			productName = BBFoundation;
@@ -324,6 +379,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				79D00E2E1DD7CA4E005DA58E /* PBXTargetDependency */,
 			);
 			name = "BBFoundation-watchOS";
 			productName = "BBFoundation-watchOS";
@@ -336,6 +392,7 @@
 		79D00D401DD7BEA7005DA58E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BB;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Bion Bilateral, LLC.";
 				TargetAttributes = {
@@ -361,6 +418,12 @@
 			mainGroup = 79D00D3F1DD7BEA7005DA58E;
 			productRefGroup = 79D00D4A1DD7BEA7005DA58E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 79D00E211DD7CA0A005DA58E /* Products */;
+					ProjectRef = 79D00E201DD7CA0A005DA58E /* BBCore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				79D00D481DD7BEA7005DA58E /* BBFoundation-iOS */,
@@ -368,6 +431,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		79D00E261DD7CA0A005DA58E /* BBCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BBCore.framework;
+			remoteRef = 79D00E251DD7CA0A005DA58E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		79D00E281DD7CA0A005DA58E /* BBCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BBCore.framework;
+			remoteRef = 79D00E271DD7CA0A005DA58E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		79D00D471DD7BEA7005DA58E /* Resources */ = {
@@ -438,6 +518,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79D00E2C1DD7CA4A005DA58E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BBCore-iOS";
+			targetProxy = 79D00E2B1DD7CA4A005DA58E /* PBXContainerItemProxy */;
+		};
+		79D00E2E1DD7CA4E005DA58E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BBCore-watchOS";
+			targetProxy = 79D00E2D1DD7CA4E005DA58E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		79D00D4F1DD7BEA7005DA58E /* Debug */ = {
@@ -637,6 +730,7 @@
 				79D00D531DD7BEA7005DA58E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D00D5E1DD7BF0F005DA58E /* Build configuration list for PBXNativeTarget "BBFoundation-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -645,6 +739,7 @@
 				79D00D601DD7BF0F005DA58E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
