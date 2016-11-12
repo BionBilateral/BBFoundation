@@ -1,9 +1,9 @@
 //
-//  BBFoundation.h
-//  BBFoundation
+//  NSURL+BBFoundationExtensions.h
+//  BBFrameworks
 //
-//  Created by William Towe on 11/12/16.
-//  Copyright © 2016 Bion Bilateral, LLC. All rights reserved.
+//  Created by William Towe on 5/17/15.
+//  Copyright (c) 2015 Bion Bilateral, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 //
@@ -13,31 +13,31 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT double BBFoundationVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT const unsigned char BBFoundationVersionString[];
+/**
+ Category on NSURL adding various convenience methods.
+ */
+@interface NSURL (BBFoundationExtensions)
 
-#import "BBFoundationDebugging.h"
-#import "BBFoundationMacros.h"
-#import "BBFoundationFunctions.h"
-#import "BBFoundationGeometryFunctions.h"
+/**
+ Creates and returns a dictionary with query keys mapping to query values.
+ 
+ @return The query dictionary
+ */
+- (nullable NSDictionary *)BB_queryDictionary;
 
-#import "NSFileManager+BBFoundationExtensions.h"
-#import "NSArray+BBFoundationExtensions.h"
-#import "NSMutableArray+BBFoundationExtensions.h"
-#import "NSData+BBFoundationExtensions.h"
-#import "NSDate+BBFoundationExtensions.h"
-#import "NSString+BBFoundationExtensions.h"
-#import "NSBundle+BBFoundationExtensions.h"
-#import "NSURL+BBFoundationExtensions.h"
-#import "NSError+BBFoundationExtensions.h"
-#import "NSObject+BBFoundationExtensions.h"
-#import "NSSet+BBFoundationExtensions.h"
-#import "NSDictionary+BBFoundationExtensions.h"
-#import "NSHTTPURLResponse+BBFoundationExtensions.h"
-#import "NSURLRequest+BBFoundationExtensions.h"
+/**
+ Create and return an NSURL with _baseString_ and optional query _parameters_.
+ 
+ @param baseString The base string of the NSURL
+ @param parameters Optional parameters dictionary
+ @return The NSURL created from _baseString_ and _parameters_
+ */
++ (NSURL *)BB_URLWithBaseString:(NSString *)baseString parameters:(nullable NSDictionary *)parameters;
 
-#import "BBSnakeCaseToLlamaCaseValueTransformer.h"
-#import "BBTimer.h"
+@end
+
+NS_ASSUME_NONNULL_END

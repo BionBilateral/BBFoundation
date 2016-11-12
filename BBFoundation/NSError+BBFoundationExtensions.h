@@ -1,9 +1,9 @@
 //
-//  BBFoundation.h
-//  BBFoundation
+//  NSError+BBExtensions.h
+//  BBFrameworks
 //
-//  Created by William Towe on 11/12/16.
-//  Copyright © 2016 Bion Bilateral, LLC. All rights reserved.
+//  Created by Jason Anderson on 7/3/15.
+//  Copyright (c) 2015 Bion Bilateral, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 //
@@ -13,31 +13,37 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT double BBFoundationVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT const unsigned char BBFoundationVersionString[];
+/**
+ The key used to identify the alert title.
+ */
+extern NSString *const BBErrorAlertTitleKey;
+/**
+ The key used to identify the alert message.
+ */
+extern NSString *const BBErrorAlertMessageKey;
 
-#import "BBFoundationDebugging.h"
-#import "BBFoundationMacros.h"
-#import "BBFoundationFunctions.h"
-#import "BBFoundationGeometryFunctions.h"
+/**
+ Category on NSError adding convenience methods to get the alert title and message using the above keys.
+ */
+@interface NSError (BBFoundationExtensions)
 
-#import "NSFileManager+BBFoundationExtensions.h"
-#import "NSArray+BBFoundationExtensions.h"
-#import "NSMutableArray+BBFoundationExtensions.h"
-#import "NSData+BBFoundationExtensions.h"
-#import "NSDate+BBFoundationExtensions.h"
-#import "NSString+BBFoundationExtensions.h"
-#import "NSBundle+BBFoundationExtensions.h"
-#import "NSURL+BBFoundationExtensions.h"
-#import "NSError+BBFoundationExtensions.h"
-#import "NSObject+BBFoundationExtensions.h"
-#import "NSSet+BBFoundationExtensions.h"
-#import "NSDictionary+BBFoundationExtensions.h"
-#import "NSHTTPURLResponse+BBFoundationExtensions.h"
-#import "NSURLRequest+BBFoundationExtensions.h"
+/**
+ Returns the value for the BBErrorAlertTitleKey key in the receiver's userInfo dictionary if non-nil, otherwise returns a default title.
+ 
+ @return The alert title
+ */
+- (NSString *)BB_alertTitle;
+/**
+ Returns the value for the BBErrorAlertMessageKey key in the receiver's userInfo dictionary if non-nil, then the value for the NSLocalizedDescriptionKey key, then a default title.
+ 
+ @return The alert message
+ */
+- (NSString *)BB_alertMessage;
 
-#import "BBSnakeCaseToLlamaCaseValueTransformer.h"
-#import "BBTimer.h"
+@end
+
+NS_ASSUME_NONNULL_END
